@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.PreferenceX" parent="Theme.AppCompat.Light">
+        <item name="colorPrimaryDark">#ffe0e0e0</item>
+        <item name="android:windowBackground">#f6f2f5</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarColor">#ffffff</item>
+        <item name="android:navigationBarDividerColor">#20444444</item>
+    </style>
+</resources>

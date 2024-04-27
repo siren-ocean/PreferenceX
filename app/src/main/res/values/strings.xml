@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PreferenceX</string>
+    <string name="app_summary">Title, System, Theme</string>
+
+    <string name="title_info">Info</string>
+    <string name="system">System</string>
+    <string name="device_info">Device Info</string>
+
+    <string name="model">Model</string>
+    <string name="product">Product</string>
+    <string name="device">Device</string>
+    <string name="board">Board</string>
+    <string name="manufacturer">Manufacturer</string>
+    <string name="bootloader">Bootloader</string>
+    <string name="radio">Radio</string>
+
+    <string name="operating_system">Operating System</string>
+    <string name="android_version">Android Version</string>
+    <string name="build_number">Build Number</string>
+    <string name="api">API</string>
+
+    <string name="hide_action_bar">Hide ActionBar</string>
+    <string name="summary_hide_action_bar">Try to hide ActionBar</string>
+
+    <string name="full_screen">Full Screen</string>
+    <string name="summary_hide">Hide navigationBar and statusBar</string>
+    <string name="summary_show">Show navigationBar and statusBar</string>
+
+    <string name="theme">Theme</string>
+    <string name="theme_dark" translatable="false">Dark</string>
+    <string name="theme_light" translatable="false">Light</string>
+
+    <string name="title">Title</string>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/device">
+        <Preference android:layout="@layout/item_icon" />
+        <Preference
+            android:key="key_model"
+            android:title="@string/model" />
+
+        <Preference
+            android:key="key_product"
+            android:title="@string/product" />
+
+        <Preference
+            android:key="key_device"
+            android:title="@string/device" />
+
+        <Preference
+            android:key="key_board"
+            android:title="@string/board" />
+
+        <Preference
+            android:key="key_manufacturer"
+            android:title="@string/manufacturer" />
+
+        <Preference
+            android:key="key_bootloader"
+            android:title="@string/bootloader" />
+
+        <Preference
+            android:key="key_radio"
+            android:title="@string/radio" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/operating_system">
+
+        <Preference
+            android:key="key_android_version"
+            android:title="@string/android_version" />
+
+        <Preference
+            android:key="key_api"
+            android:title="@string/api" />
+
+        <Preference
+            android:key="key_build"
+            android:title="@string/build_number" />
+    </PreferenceCategory>
+</PreferenceScreen>

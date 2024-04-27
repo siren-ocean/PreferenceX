@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="key_title"
+        android:title="@string/title" />
+
+    <Preference
+        android:fragment="siren.ocean.preference.fragment.SystemSettings"
+        android:key="key_system"
+        android:title="@string/system" />
+
+    <SwitchPreference
+        android:key="key_hide_action_bar"
+        android:summary="@string/summary_hide_action_bar"
+        android:title="@string/hide_action_bar" />
+
+    <CheckBoxPreference
+        android:key="key_full_screen"
+        android:summaryOff="@string/summary_show"
+        android:summaryOn="@string/summary_hide"
+        android:title="@string/full_screen" />
+
+    <ListPreference
+        android:defaultValue="@string/theme_light"
+        android:entries="@array/theme_entries"
+        android:entryValues="@array/theme_values"
+        android:key="key_theme"
+        android:title="@string/theme" />
+</PreferenceScreen>

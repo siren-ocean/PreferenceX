@@ -1,0 +1,59 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'siren.ocean.preference'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "siren.ocean.preference"
+        minSdk 27
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    signingConfigs {
+        platform {
+            storeFile file("platform.keystore")
+            storePassword '123456'
+            keyAlias 'platform'
+            keyPassword '123456'
+        }
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            signingConfig signingConfigs.platform
+        }
+
+        debug {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.platform
+        }
+
+        applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "PreferenceX.apk"
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.preference
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PreferenceX</string>
+    <string name="app_summary">标题、系统、主题设置</string>
+
+    <string name="title_info">信息</string>
+    <string name="system">系统</string>
+    <string name="device_info">设备信息</string>
+
+    <string name="model">型号</string>
+    <string name="product">产品</string>
+    <string name="device">设备</string>
+    <string name="board">主板</string>
+    <string name="manufacturer">制造商</string>
+    <string name="bootloader">Bootloader</string>
+    <string name="radio">基带</string>
+
+    <string name="operating_system">操作系统</string>
+    <string name="android_version">Android版本</string>
+    <string name="build_number">版本号</string>
+    <string name="api">API</string>
+
+    <string name="hide_action_bar">隐藏ActionBar</string>
+    <string name="summary_hide_action_bar">隐藏标题栏</string>
+
+    <string name="full_screen">全屏模式</string>
+    <string name="summary_hide">隐藏导航栏和状态栏</string>
+    <string name="summary_show">显示导航栏和状态栏</string>
+
+    <string name="theme">主题设置</string>
+    <string name="title">标题</string>
+</resources>
