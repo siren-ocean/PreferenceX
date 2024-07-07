@@ -66,44 +66,63 @@ public class MainSettings extends PreferenceFragmentCompat {
         }
     }
 
+    /**
+     * 初始化 ActionBar SwitchPreference
+     */
     private void initHideActionBarPref() {
         SwitchPreference switchPref = findPreference(KEY_HIDE_ACTION_BAR);
         if (switchPref != null) {
+            hideActionBar(switchPref.isChecked());
             switchPref.setOnPreferenceChangeListener((preference, newValue) -> {
                 boolean isHide = (boolean) newValue;
-                ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
-                if (actionBar != null) {
-                    if (isHide) {
-                        actionBar.hide();
-                    } else {
-                        actionBar.show();
-                    }
-                }
+                hideActionBar(isHide);
                 return true;
             });
         }
     }
 
+    private void hideActionBar(boolean isHide) {
+        ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
+        if (actionBar != null) {
+            if (isHide) {
+                actionBar.hide();
+            } else {
+                actionBar.show();
+            }
+        }
+    }
+
+    /**
+     * 初始化 NavigationBar CheckBoxPreference
+     */
     private void initHideNavigationBarPref() {
         CheckBoxPreference checkBoxPref = findPreference(KEY_FULL_SCREEN);
         if (checkBoxPref != null) {
+            hideNavigationBar(checkBoxPref.isChecked());
             checkBoxPref.setOnPreferenceChangeListener((preference, newValue) -> {
                 boolean isChecked = (boolean) newValue;
-                View decorView = getActivity().getWindow().getDecorView();
-                if (isChecked) {
-                    decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-                } else {
-                    decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
-                }
+                hideNavigationBar(isChecked);
                 return true;
             });
         }
     }
 
+    private void hideNavigationBar(boolean isChecked) {
+        View decorView = getActivity().getWindow().getDecorView();
+        if (isChecked) {
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        } else {
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+        }
+    }
+
+    /**
+     * 初始化主题选择
+     */
     private void initThemePref() {
         ListPreference themeListPref = findPreference(KEY_THEME);
         if (themeListPref != null) {
