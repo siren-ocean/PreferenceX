@@ -2,13 +2,9 @@ package siren.ocean.preference.fragment;
 
 import android.os.Build;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceFragmentCompat;
-import androidx.preference.SwitchPreference;
+import android.support.annotation.Nullable;
+import android.support.v14.preference.PreferenceFragment;
+import android.support.v7.preference.Preference;
 
 import siren.ocean.preference.R;
 
@@ -16,7 +12,7 @@ import siren.ocean.preference.R;
  * 系统信息
  * Created by Siren on 2024/1/24.
  */
-public class SystemSettings extends PreferenceFragmentCompat {
+public class SystemSettings extends PreferenceFragment {
 
     private final static String KEY_MODEL = "key_model";
     private final static String KEY_PRODUCT = "key_product";
@@ -32,7 +28,7 @@ public class SystemSettings extends PreferenceFragmentCompat {
     @Override
     public void onResume() {
         super.onResume();
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.system);
+        getActivity().getActionBar().setTitle(R.string.system);
     }
 
     @Override

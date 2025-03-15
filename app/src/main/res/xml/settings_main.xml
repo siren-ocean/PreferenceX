@@ -6,7 +6,6 @@
         android:title="@string/title" />
 
     <Preference
-        android:fragment="siren.ocean.preference.fragment.SystemSettings"
         android:key="key_system"
         android:title="@string/system" />
 
