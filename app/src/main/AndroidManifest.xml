@@ -19,7 +19,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <!-- <category android:name="android.intent.category.LAUNCHER" />-->
             </intent-filter>
 
             <intent-filter android:priority="10">
@@ -45,6 +45,10 @@
             <meta-data
                 android:name="com.android.settings.icon"
                 android:resource="@drawable/ic_icon" />
+
+            <meta-data
+                android:name="com.android.settings.bg.hint"
+                android:resource="@color/black" />
         </activity>
     </application>
 </manifest>
